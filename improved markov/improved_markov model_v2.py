@@ -26,19 +26,28 @@ def time2(x):
         nhh=1
     else:
         nhh=0
-    return nhh
+    return nhh    
+            
 
-def markov_pred(juzhen1,juzhen2,d1,t1,t2,bj):
+def markov_pred(juzhen1,juzhen2,d1,t1,t2,bjs):
     od=np.sum(juzhen1,axis=2)
+    aod=np.sum(od[d1,:])
+    
     d=np.sum(od,axis=0)
+    bj,maxzhi=bjs
+    
     if bj==0:
-        pred1=np.argsort(d)[::-1][0:10].tolist()
-        
-    elif bj==1:
-        if np.sum(od[d1,:])>0:
-            pred1=np.argsort(od[d1,:])[::-1][0:10].tolist()
+        if maxzhi>=0.5:
+            if aod>0:
+                pred1=np.argsort(od[d1,:])[::-1][0:10].tolist()
+            else:
+                pred1=np.argsort(d)[::-1][0:10].tolist()
         else:
-            pred1=([-1])*10
+            pred1=np.argsort(d)[::-1][0:10].tolist()
+    
+    elif bj==1:
+        pred1=np.argsort(od[d1,:])[::-1][0:10].tolist()
+
             
     elif bj==2:
         td2=np.sum(juzhen2,axis=0).transpose()
@@ -78,8 +87,7 @@ def han1(mm):
     nn=np.array(nn)
     ind=np.where(nn==rr)[0]#r_tod,r_td,r_od,r_d,r_tod2,r_td2
 #    nind=b_dict[ind[0]]
-    return ind[0]
-
+    return ind[0],rr
 
 #b_dict={0:0,1:1,2:2,3:2,4:3,5:3}
    
