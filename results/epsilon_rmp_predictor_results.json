@@ -1,0 +1,18 @@
+{
+  "model": "\u03b5-RMP Predictor",
+  "user_count": 1077,
+  "total_samples": 20884,
+  "epsilon_rmp_distribution": {
+    "low": 1,
+    "medium": 455,
+    "high": 621
+  },
+  "overall_metrics": {
+    "top1": 0.16562918981038116,
+    "top5": 0.41333077954414865,
+    "top10": 0.5677073357594331,
+    "mrr": 0.274788742350032,
+    "ndcg5": 0.29386566608532133,
+    "ndcg10": 0.34352077495724176
+  }
+}

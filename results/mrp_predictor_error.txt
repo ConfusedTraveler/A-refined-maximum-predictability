@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "mrp_predictor.py", line 309, in <module>
+    main()
+  File "mrp_predictor.py", line 304, in main
+    print("\n\u274c MRP指标仍需改进")
+UnicodeEncodeError: 'gbk' codec can't encode character '\u274c' in position 2: illegal multibyte sequence
