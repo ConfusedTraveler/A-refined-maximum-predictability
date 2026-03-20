@@ -1,0 +1,14 @@
+{
+  "model": "ADF (Attention-based Dynamic Fusion)",
+  "user_count": 1077,
+  "total_samples": 20884,
+  "overall_metrics": {
+    "top1": 0.24645661750622486,
+    "top5": 0.5704845814977973,
+    "top10": 0.6942635510438613,
+    "mrr": 0.38233287121909143,
+    "ndcg5": 0.4165968411461776,
+    "ndcg10": 0.45685478836688187,
+    "coverage": 190
+  }
+}
