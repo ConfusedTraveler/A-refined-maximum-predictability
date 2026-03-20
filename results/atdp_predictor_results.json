@@ -1,0 +1,18 @@
+{
+  "model": "ATDP Predictor",
+  "user_count": 1077,
+  "total_samples": 20884,
+  "strategy_distribution": {
+    "high_personalization": 3139,
+    "adaptive_fusion": 2889,
+    "global_trend": 14856
+  },
+  "overall_metrics": {
+    "top1": 0.09040413713847922,
+    "top5": 0.3750239417736066,
+    "top10": 0.5451063014748132,
+    "mrr": 0.21129434168483277,
+    "ndcg5": 0.23467353136355748,
+    "ndcg10": 0.28964981510204474
+  }
+}
